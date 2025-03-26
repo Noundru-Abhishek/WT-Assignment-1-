@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Registration Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e0f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin-left: 20px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            border: 2px dotted #000;
+            z-index: 10;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            font-size: 16px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            display: block;
+        }
+        .gender-group {
+            display: flex;
+            gap: 10px;
+        }
+        .btn {
+            background: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Vehicle Registration Form</h2>
+        <form>
+            <div class="form-group">
+                <label>First Name</label>
+                <input type="text" name="first_name" required>
+            </div>
+            <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" name="last_name" required>
+            </div>
+            <div class="form-group">
+                <label>Date of Birth</label>
+                <input type="date" name="dob" required>
+            </div>
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="gender-group">
+                    <input type="radio" name="gender" value="Male" required> Male
+                    <input type="radio" name="gender" value="Female"> Female
+                    <input type="radio" name="gender" value="Other"> Other
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Vehicle Name</label>
+                <input type="text" name="vehicle_name" required>
+            </div>
+            <div class="form-group">
+                <label>Model</label>
+                <input type="text" name="model" required>
+            </div>
+            <div class="form-group">
+                <label>Company Name</label>
+                <input type="text" name="company_name" required>
+            </div>
+            <div class="form-group">
+                <label>Address</label>
+                <textarea name="address" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label>Aadhar Card Number</label>
+                <input type="text" name="aadhar" required>
+            </div>
+            <div class="form-group">
+                <label>Driving License Number</label>
+                <input type="text" name="license_number" required>
+            </div>
+            <div class="form-group">
+                <label>Upload Photo</label>
+                <input type="file" name="photo" accept="image/*" required>
+            </div>
+            <button type="submit" class="btn">Register Vehicle</button>
+        </form>
+    </div>
+</body>
+</html>
